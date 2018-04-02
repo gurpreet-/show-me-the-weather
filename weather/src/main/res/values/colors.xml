@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary_orange">#ffffc61d</color>
+    <color name="secondary_orange">#ffeeaf38</color>
+    <color name="tertiary_orange">#ffdd991d</color>
+    <color name="quaternary_orange">#ffd49a23</color>
+
+
+    <color name="primary_blue">#5696BC</color>
+    <color name="secondary_blue">#2F5168</color>
+    <color name="tertiary_blue">#ff193d5d</color>
+
+
+    <color name="plain">#fff9ebd8</color>
+
+
+    <color name="font_color">#ff5d5d5d</color>
+    <color name="separator">#ff2d2d2d</color>
+    <color name="separator_font_color">#fffafafa</color>
+</resources>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:wheel="http://schemas.android.com/apk/res-auto"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/plain"
+                android:gravity="center">
+
+
+    <RelativeLayout android:layout_width="fill_parent"
+                  android:layout_height="140dp"
+                  android:background="@color/secondary_blue"
+                  android:padding="10dp"
+                  android:id="@+id/header">
+
+
+
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:textColor="#fff"
+                  android:layout_centerInParent="true"
+                  android:text="Show Me The Weather"
+                  android:id="@+id/choose"
+                  android:textStyle="bold|italic"
+                  style="@style/BigTitles" />
+
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:textColor="#fff"
+                  android:layout_centerInParent="true"
+                  android:text="Settings"
+                  android:id="@+id/initial_setup"
+                  android:layout_below="@+id/choose"
+                  style="@style/SmallTitles" />
+
+    </RelativeLayout>
+
+
+
+    <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/header"
+            android:animateLayoutChanges="true"
+            android:fillViewport="true">
+
+        <LinearLayout android:layout_width="fill_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="vertical"
+                      android:id="@+id/body">
+
+            <TextView android:layout_height="wrap_content"
+                      android:id="@+id/city_region"
+                      style="@style/SmallTitles"
+                      android:background="@color/primary_blue"
+                      android:textStyle="bold"
+                      android:textAllCaps="true"
+                      android:gravity="start|center_vertical"
+                      android:paddingTop="10dp"
+                      android:paddingBottom="10dp"
+                      android:paddingLeft="24dp"
+                      android:paddingStart="24dp"
+                      android:paddingRight="24dp"
+                      android:paddingEnd="18dp"
+                      android:text="Select a location"
+                      android:textColor="@color/separator_font_color"
+                      android:textSize="13sp" />
+
+            <com.pnikosis.materialishprogress.ProgressWheel
+                    android:id="@+id/progress_wheel"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="24dp"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    wheel:barColor="@color/primary_blue"
+                    wheel:rimColor="@color/plain"
+                    wheel:rimWidth="2dp"
+                    android:visibility="gone"
+                    wheel:progressIndeterminate="true" />
+
+            <TextView android:layout_width="fill_parent"
+                      android:layout_height="wrap_content"
+                      android:padding="10dp"
+                      android:layout_marginLeft="24dp"
+                      android:layout_marginEnd="24dp"
+                      android:layout_marginRight="24dp"
+                      android:layout_marginTop="10dp"
+                      android:text="Not the correct results? Press the button above to try again."
+                      android:textSize="14sp"
+                      android:id="@+id/notify"
+                      android:visibility="gone"
+                      style="@style/SmallTitles" />
+
+            <android.support.v7.widget.RecyclerView
+                    android:id="@+id/city_list"
+                    android:layout_width="fill_parent"
+                    android:layout_height="200dp"
+                    android:paddingLeft="24dp"
+                    android:paddingRight="24dp"
+                    android:layout_marginTop="12dp"
+                    android:paddingTop="5dp"
+                    android:scrollbars="vertical" />
+
+            <at.markushi.ui.CircleButton
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:id="@+id/okay"
+                    android:layout_gravity="center"
+                    android:clickable="false"
+                    android:onClick="onClick"
+                    android:src="@drawable/ic_check_black_18dp"
+                    app:cb_color="#ffc7c7c7"
+                    app:cb_pressedRingWidth="20dp" />
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+    <com.shamanland.fab.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignBottom="@+id/header"
+            android:layout_marginBottom="-24dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginEnd="20dp"
+            android:clickable="true"
+            android:onClick="onClick"
+            android:src="@drawable/ic_crosshairs_gps_black_18dp"
+            app:floatingActionButtonColor="@color/primary_orange"
+            app:floatingActionButtonSize="mini"
+            />
+
+</RelativeLayout>

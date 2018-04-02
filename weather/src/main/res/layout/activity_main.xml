@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:animateLayoutChanges="true"
+        android:fillViewport="true">
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="30dp"
+            android:background="@color/secondary_blue">
+
+
+        <LinearLayout android:layout_width="fill_parent"
+                      android:layout_height="fill_parent"
+                      android:orientation="vertical"
+                      android:id="@+id/header">
+
+            <include layout="@layout/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+
+
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:textColor="#FFF"
+                      android:layout_gravity="center"
+                      android:gravity="center"
+                      android:padding="25dp"
+                      android:text="Today "
+                      android:textStyle="bold|italic"
+                      android:id="@+id/day"
+                      android:textSize="22sp"
+                      style="@style/BigTitles" />
+
+            <LinearLayout android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center">
+
+                <TextView android:layout_width="120dp"
+                          android:layout_height="wrap_content"
+                          android:layout_gravity="end|center_vertical"
+                          android:padding="10dp"
+                          android:gravity="end"
+                          android:id="@+id/where"
+                          android:textSize="14sp"
+                          android:text="Loading..."/>
+
+                <ImageView android:layout_width="100dp"
+                           android:layout_height="100dp"
+                           android:src="@drawable/cloudy1_night"
+                           android:id="@+id/img_weather"
+                           android:layout_gravity="center"
+                           android:scaleType="fitXY"
+                           android:adjustViewBounds="true"/>
+
+                <TextView android:layout_width="120dp"
+                          android:padding="10dp"
+                          android:layout_gravity="start|center_vertical"
+                          android:layout_height="wrap_content"
+                          android:id="@+id/temp"
+                          android:textSize="20sp"
+                          android:textStyle="bold"
+                          android:text="Loading..."/>
+
+            </LinearLayout>
+
+
+
+            <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:padding="10dp"
+                    android:layout_gravity="center_horizontal">
+
+                <TableRow android:layout_marginTop="@dimen/table_row_padding_top"
+                          android:layout_marginBottom="@dimen/table_row_padding_bottom">
+                    <TextView style="@style/Details.Actual"
+                              android:id="@+id/temp_min"
+                              android:text="Min temp" />
+
+                    <TextView style="@style/Details.Actual"
+                              android:id="@+id/temp_max"
+                              android:text="Max temp" />
+                </TableRow>
+
+                <TableRow>
+                    <TextView style="@style/Details"
+                              android:text="Min temp" />
+
+                    <TextView style="@style/Details"
+                            android:text="Max temp" />
+                </TableRow>
+
+
+
+
+                <TableRow android:layout_marginTop="@dimen/table_row_padding_top"
+                          android:layout_marginBottom="@dimen/table_row_padding_bottom">
+                    <TextView style="@style/Details.Actual"
+                              android:id="@+id/wind_speed"
+                              android:text="Wind speed" />
+
+                    <TextView style="@style/Details.Actual"
+                              android:id="@+id/pressure"
+                              android:text="Pressure" />
+                </TableRow>
+
+                <TableRow>
+                    <TextView style="@style/Details"
+                            android:text="Wind speed" />
+
+                    <TextView style="@style/Details"
+                            android:text="Pressure" />
+                </TableRow>
+
+
+
+
+                <TableRow android:layout_marginTop="@dimen/table_row_padding_top"
+                          android:layout_marginBottom="@dimen/table_row_padding_bottom">
+                    <TextView style="@style/Details.Actual"
+                              android:id="@+id/sunrise"
+                              android:text="Sunrise" />
+
+                    <TextView style="@style/Details.Actual"
+                              android:id="@+id/sunset"
+                              android:text="Sunset" />
+                </TableRow>
+
+                <TableRow >
+                    <TextView style="@style/Details"
+                            android:text="Sunrise" />
+
+                    <TextView style="@style/Details"
+                            android:text="Sunset" />
+                </TableRow>
+            </TableLayout>
+
+
+        </LinearLayout>
+
+
+
+
+
+    </RelativeLayout>
+</ScrollView>
